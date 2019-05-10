@@ -1,6 +1,8 @@
 package edu201905.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -11,6 +13,7 @@ import javax.servlet.ServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
+import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.service.DeptService;
 
 public class AppServlet implements Servlet {
@@ -33,9 +36,15 @@ public class AppServlet implements Servlet {
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		req.setAttribute("result", deptService.getDeptList());
-		req.getRequestDispatcher("/jsp/dept.jsp").forward(req, res);
-		;
+		// 设置响应内容类型 解决乱码问题
+		res.setContentType("text/html;charset=utf-8");
+		List<DeptInfo> result = deptService.getDeptList();
+		// 实际的逻辑是在这里
+		PrintWriter out = res.getWriter();
+		for (DeptInfo dept : result) {
+			out.println("<h1>" + dept + "</h1>");
+		}
+
 	}
 
 	@Override
