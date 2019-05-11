@@ -6,7 +6,15 @@
 		id="empResultMap">
 		<id property="empno" column="empno" />
 		<result property="ename" column="ename" />
-		
-		
+		<result property="job" column="job" />
+		<result property="mgr" column="mgr" />
+		<result property="hiredate" column="hiredate" />
+		<result property="sal" column="sal" />
+		<result property="deptno" column="deptno" />
+
+
 	</resultMap>
+
+	<sql id="column_all">empno,ename,job,mgr,hiredate,sal,deptno
+	</sql>
 </mapper>
