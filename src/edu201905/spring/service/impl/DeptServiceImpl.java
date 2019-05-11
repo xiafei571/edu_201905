@@ -32,4 +32,10 @@ public class DeptServiceImpl implements DeptService {
 		return null;
 	}
 
+	@Override
+	public Integer deleteDept(Integer deptInfo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

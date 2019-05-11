@@ -11,5 +11,7 @@ public interface DeptService {
 	Integer addDept(DeptInfo dept);
 
 	Integer updateDept(DeptInfo dept);
+	
+	Integer deleteDept(Integer deptInfo);
 
 }
