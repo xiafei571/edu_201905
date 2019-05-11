@@ -13,4 +13,10 @@ public interface DeptMapper {
 	@Select("SELECT " + column_all + " FROM dept")
 	@ResultMap("deptResultMap")
 	List<DeptInfo> getDeptInfoList();
+	
+	Integer addDept(DeptInfo dept);
+
+	Integer updateDept(DeptInfo dept);
+	
+	Integer deleteDept(Integer deptInfo);
 }
