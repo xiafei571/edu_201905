@@ -7,8 +7,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- 配置spring注解扫描路径 -->
 	<context:component-scan
 		base-package="edu201905.spring" />
+	<!-- 加载本地src下配置文件 -->
 	<context:property-placeholder
 		location="classpath:conf.properties" />
 

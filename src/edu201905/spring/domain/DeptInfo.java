@@ -1,7 +1,7 @@
 package edu201905.spring.domain;
 
 public class DeptInfo {
-	//部门编号
+	// 部门编号
 	private Integer deptno;
 	// 部門名前
 	private String dname;
