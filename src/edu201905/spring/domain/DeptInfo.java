@@ -1,10 +1,11 @@
 package edu201905.spring.domain;
 
 public class DeptInfo {
-private Integer deptno;
-	
+	//部门编号
+	private Integer deptno;
+
 	private String dname;
-	
+
 	private String loc;
 
 	@Override
