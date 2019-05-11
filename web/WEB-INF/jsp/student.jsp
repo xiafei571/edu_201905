@@ -24,7 +24,7 @@
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">sname</th>
-					<th scope="col">sex</th>
+					<th scope="col">gender</th>
 					<th scope="col">birth</th>
 					<th scope="col">loc</th>
 					<th scope="col">ethnic</th>
@@ -37,7 +37,7 @@
 					<tr>
 						<th scope="row">${list.sid}</th>
 						<td>${list.sname}</td>
-						<td>${list.sex}</td>
+						<td>${list.gender}</td>
 
 						<td><fmt:formatDate value="${list.birth}"
 								pattern="yyyy/MM/dd" /></td>
@@ -45,8 +45,6 @@
 						<td>${list.ethnic}</td>
 					</tr>
 				</c:forEach>
-
-
 			</tbody>
 		</table>
 	</div>

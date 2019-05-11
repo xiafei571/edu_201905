@@ -20,4 +20,16 @@ public class DeptServiceImpl implements DeptService {
 		return deptMapper.getDeptInfoList();
 	}
 
+	@Override
+	public Integer addDept(DeptInfo dept) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer updateDept(DeptInfo dept) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

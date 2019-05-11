@@ -2,10 +2,13 @@ package edu201905.spring.domain;
 
 import java.util.Date;
 
+import edu201905.util.CommonUtils;
+
 public class StudentInfo {
 	private Integer sid;
 	private String sname;
 	private Integer sex;
+	private String gender;
 	private Date birth;
 	private String loc;
 	private String ethnic;
@@ -38,6 +41,7 @@ public class StudentInfo {
 
 	public void setSex(Integer sex) {
 		this.sex = sex;
+		this.gender = CommonUtils.sex2Gender(sex);
 	}
 
 	public Date getBirth() {
@@ -64,4 +68,11 @@ public class StudentInfo {
 		this.ethnic = ethnic;
 	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 }
