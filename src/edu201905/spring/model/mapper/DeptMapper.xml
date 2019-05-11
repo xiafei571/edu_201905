@@ -14,7 +14,7 @@
 	</sql>
 
 	<!-- 增加 -->
-	<insert id="addDeptInfo" useGeneratedKeys="true"
+	<insert id="addDept" useGeneratedKeys="true"
 		keyProperty="deptno">
 		insert into dept(
 		<include refid="column_all" />
