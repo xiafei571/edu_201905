@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="edu201905.spring.model.mapper.StudentMapper">
+	<resultMap type="edu201905.spring.domain.StudentInfo"
+
+		id="studentResultMap">
+		<id property="sid" column="sid" />
+		<result property="sname" column="sname" />
+		<result property="sex" column="sex" />
+		<result property="birth" column="birth" />
+		<result property="loc" column="loc" />
+		<result property="ethnic" column="ethnic" />
+
+
+	</resultMap>
+
+	<sql id="column_all">sid,sname,sex,birth,loc,ethnic
+	</sql>
+</mapper>
+	
+	

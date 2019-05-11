@@ -12,6 +12,18 @@ CREATE TABLE `dept` (
   PRIMARY KEY (`deptno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+CREATE TABLE `student`(
+`sid` int(10) NOT NULL COMMENT '学生ID',
+`sname` varchar(10) DEFAULT NULL COMMENT '学生名前',
+`sex` int(2) DEFAULT 0 COMMENT '性別　0無知　1男　2女',
+`birth`   date DEFAULT NULL COMMENT '生年月日',
+`loc` varchar(10) DEFAULT NULL COMMENT '出身',
+`ethnic` varchar(10) DEFAULT NULL COMMENT '民族',
+PRIMARY KEY (`sid`)
+
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- 创建员工表
 CREATE TABLE `emp` (
   `empno` int(4) NOT NULL COMMENT '员工编号',
