@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
+import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.domain.StudentInfo;
 
 public interface StudentMapper {
@@ -14,4 +15,9 @@ public interface StudentMapper {
 	@ResultMap("studentResultMap")
 	List<StudentInfo> getStudentInfoList();
 
+	Integer addStudent(DeptInfo student);
+
+	Integer updateStudent(DeptInfo student);
+
+	Integer deleteStudent(Integer student);
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.domain.StudentInfo;
 import edu201905.spring.model.mapper.StudentMapper;
 import edu201905.spring.service.StudentService;
@@ -18,5 +19,23 @@ public class StudentServicelmpl implements StudentService {
 	public List<StudentInfo> getStudentList() {
 		return studentMapper.getStudentInfoList();
 
+	}
+
+	@Override
+	public Integer addStudent(DeptInfo student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer updateStudent(DeptInfo student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer deleteStudent(Integer student) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

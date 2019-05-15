@@ -2,6 +2,7 @@ package edu201905.spring.service;
 
 import java.util.List;
 
+import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.domain.EmpInfo;
 
 public interface EmpService {
