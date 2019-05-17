@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import edu201905.common.page.Pagination;
+import edu201905.common.page.PaginationResult;
 import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.model.mapper.DeptMapper;
 import edu201905.spring.service.DeptService;
@@ -21,21 +23,34 @@ public class DeptServiceImpl implements DeptService {
 	}
 
 	@Override
+	public PaginationResult<List<DeptInfo>> getDeptList(Integer pageIndex, Integer pageSize) {
+		Integer count = deptMapper.getDeptCount();
+		Pagination pagination1 = new Pagination(pageIndex, pageSize);
+		pagination1.setTotalCount(count);
+
+		List<DeptInfo> deptList = deptMapper.getDeptPage(pagination1.getCursor(), pagination1.getOffset());
+		PaginationResult<List<DeptInfo>> result = new PaginationResult<List<DeptInfo>>(pagination1, deptList);
+		return result;
+	}
+
+	@Override
 	public Integer addDept(DeptInfo dept) {
-		// TODO Auto-generated method stub
-		return null;
+		return deptMapper.addDept(dept);
 	}
 
 	@Override
 	public Integer updateDept(DeptInfo dept) {
-		// TODO Auto-generated method stub
-		return null;
+		return deptMapper.updateDept(dept);
 	}
 
 	@Override
 	public Integer deleteDept(Integer deptInfo) {
-		// TODO Auto-generated method stub
-		return null;
+		return deptMapper.deleteDept(deptInfo);
+	}
+
+	@Override
+	public DeptInfo getDeptInfoById(Integer id) {
+		return deptMapper.getDeptInfoById(id);
 	}
 
 }

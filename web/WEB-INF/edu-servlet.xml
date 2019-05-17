@@ -13,8 +13,15 @@
 
 	<!-- 相当于注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean，配置一些messageconverter。即解决了@Controller注解的使用前提配置。 -->
 	<mvc:annotation-driven />
+
 	<!-- 指明让springmvc容器去哪里扫描@Controller注解 -->
-	<context:component-scan base-package="edu201905.spring.controller" />
+	<context:component-scan
+		base-package="edu201905.spring.controller" />
+
+	<!-- 配置静态资源访问 -->
+	<mvc:resources mapping="/js/**" location="WEB-INF/js/" />
+
+	<!-- 使用默认的静态资源处理Servlet处理静态资源,启用默认Servlet -->
 	<mvc:default-servlet-handler />
 
 	<!-- 视图解析器ViewResolver -->

@@ -13,7 +13,7 @@
 	<sql id="column_all">deptno, dname, loc
 	</sql>
 
-	<!-- 增加 -->
+	<!-- 增加 主键自增，需要数据库里也是auto_increment -->
 	<insert id="addDept" useGeneratedKeys="true"
 		keyProperty="deptno">
 		insert into dept(
@@ -21,20 +21,20 @@
 		)
 		values(null,#{dname},#{loc})
 	</insert>
-	
+
 	<!-- 更新 -->
-    <update id="updateDept"
-        parameterType="edu201905.spring.domain.DeptInfo">
-        update dept
-        <set>
-            <if test="dname != null and dname != ''">
-                dname = #{dname},
-            </if>
-            <if test="loc != null and loc != ''">
-                loc = #{loc}
-            </if>
-        </set>
-        WHERE deptno = #{deptno}
-    </update>
+	<update id="updateDept"
+		parameterType="edu201905.spring.domain.DeptInfo">
+		update dept
+		<set>
+			<if test="dname != null and dname != ''">
+				dname = #{dname},
+			</if>
+			<if test="loc != null and loc != ''">
+				loc = #{loc}
+			</if>
+		</set>
+		WHERE deptno = #{deptno}
+	</update>
 
 </mapper>
