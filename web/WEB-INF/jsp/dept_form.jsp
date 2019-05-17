@@ -64,20 +64,11 @@
 		src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/dept.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
 			initForm('${status}');
-			initPage();
-		}
-
-		function initForm(status) {
-			if (status == 0) {
-				$("#dept_form").attr("action", "add");
-				$("#dept_submit").text("添加");
-			} else if (status == 1) {
-				$("#dept_form").attr("action", "update");
-				$("#dept_submit").text("修改");
-			}
 		}
 	</script>
 </body>

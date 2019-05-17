@@ -44,17 +44,10 @@
 		<nav aria-label="...">
 			<ul class="pagination">
 				<!-- 如果当前页是第一页的话，上一页置灰 -->
-				<c:choose>
-					<c:when test="${result.pagination.pageIndex==1}">
-						<li class="page-item disabled"><a class="page-link" href="#"
-							tabindex="-1">上一页</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="page-item"><a class="page-link"
-							href="list?pageIndex=${result.pagination.pageIndex-1}&pageSize=${result.pagination.pageSize}"
-							tabindex="-1">上一页</a></li>
-					</c:otherwise>
-				</c:choose>
+
+				<li class="page-item" id="page_pre"><a class="page-link"
+					href="list?pageIndex=${result.pagination.pageIndex-1}&pageSize=${result.pagination.pageSize}"
+					tabindex="-1">上一页</a></li>
 
 				<!-- 循环生成页签 for(int i = 0; i < size; i++)  -->
 				<c:forEach var="i" begin="1"
@@ -72,18 +65,10 @@
 				</c:forEach>
 
 				<!-- 如果当前页是最后一页的话，下一页置灰 -->
-				<c:choose>
-					<c:when
-						test="${result.pagination.pageIndex==result.pagination.totalCountPage}">
-						<li class="page-item disabled"><a class="page-link" href="#"
-							tabindex="-1">下一页</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="page-item"><a class="page-link"
-							href="list?pageIndex=${result.pagination.pageIndex+1}&pageSize=${result.pagination.pageSize}"
-							tabindex="-1">下一页</a></li>
-					</c:otherwise>
-				</c:choose>
+				<li class="page-item" id="page_next"><a class="page-link"
+					href="list?pageIndex=${result.pagination.pageIndex+1}&pageSize=${result.pagination.pageSize}"
+					tabindex="-1">下一页</a></li>
+
 			</ul>
 		</nav>
 	</div>
@@ -102,7 +87,9 @@
 		src="${pageContext.request.contextPath}/js/dept.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
-			initPage('${result.pagination.pageIndex}');
+			initPage('${result.pagination.pageIndex}',
+					'${result.pagination.pageSize}',
+					'${result.pagination.totalCountPage}');
 		}
 	</script>
 </body>
