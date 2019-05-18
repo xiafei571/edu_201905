@@ -20,7 +20,7 @@ public class EmpController {
 	private EmpService empService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String emptList(HttpServletRequest request, ModelMap model) {
+	public String empList(HttpServletRequest request, ModelMap model) {
 		List<EmpInfo> result = empService.getEmpList();
 		model.addAttribute("result", result);
 		return "emp";

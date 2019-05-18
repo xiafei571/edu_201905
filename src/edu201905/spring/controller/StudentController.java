@@ -20,7 +20,7 @@ public class StudentController {
 	private StudentService studentService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String emptList(HttpServletRequest request, ModelMap model) {
+	public String studentList(HttpServletRequest request, ModelMap model) {
 		List<StudentInfo> result = studentService.getStudentList();
 		model.addAttribute("result", result);
 		return "student";
