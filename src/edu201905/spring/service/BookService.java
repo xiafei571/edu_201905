@@ -8,4 +8,5 @@ public interface BookService {
 
 	List<BookInfo> getBookList();
 
+	Integer addBook(BookInfo book);
 }

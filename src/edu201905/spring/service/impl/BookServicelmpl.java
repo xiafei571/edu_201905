@@ -19,4 +19,9 @@ public class BookServicelmpl implements BookService {
 		return bookMapper.getBookInfoList();
 
 	}
+
+	@Override
+	public Integer addBook(BookInfo book) {
+		return bookMapper.addBook(book);
+	}
 }

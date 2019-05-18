@@ -15,6 +15,15 @@
 	<sql id="column_all">bookId,bname,btype,price,author
 	</sql>
 	
+	<!-- 增加 主键自增，需要数据库里也是auto_increment -->
+	<insert id="addBook" useGeneratedKeys="true"
+		keyProperty="bookId">
+		insert into book(
+		<include refid="column_all" />
+		)
+		values(null,#{bname},#{btype},#{price},#{author})
+	</insert>
+	
 </mapper>
 	
 	

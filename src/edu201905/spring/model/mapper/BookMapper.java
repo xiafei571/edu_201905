@@ -6,8 +6,6 @@ import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
 import edu201905.spring.domain.BookInfo;
-import edu201905.spring.domain.DeptInfo;
-import edu201905.spring.domain.StudentInfo;
 
 public interface BookMapper {
 	static String column_all = " bookId,bname,btype,price,author ";
@@ -16,4 +14,5 @@ public interface BookMapper {
 	@ResultMap("bookResultMap")
 	List<BookInfo> getBookInfoList();
 
+	Integer addBook(BookInfo book);
 }
