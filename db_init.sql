@@ -38,6 +38,15 @@ CREATE TABLE `emp` (
   PRIMARY KEY (`empno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `book` (
+  `bookId` int(4) NOT NULL AUTO_INCREMENT COMMENT '图书ID',
+  `bname` varchar(14) DEFAULT NULL COMMENT '图书名称',
+  `btype` varchar(13) DEFAULT NULL COMMENT '类型',
+  `price` decimal(10,0) DEFAULT '0' COMMENT '价格',
+  `author` varchar(13) DEFAULT NULL COMMENT '作者',
+  PRIMARY KEY (`bookId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- 初始化数据
 INSERT INTO `dept` (`deptno`, `dname`, `loc`)
 VALUES
