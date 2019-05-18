@@ -13,13 +13,14 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Insert title here</title>
+<title>員工信息</title>
 </head>
 <body>
 	<div class="container">
 
 		<table class="table table-striped">
 			<thead>
+			<tr>員工列表/共有x条数据</tr>
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">ename</th>
