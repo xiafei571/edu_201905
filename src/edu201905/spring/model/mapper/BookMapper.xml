@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="edu201905.spring.model.mapper.BookMapper">
+	<resultMap type="edu201905.spring.domain.BookInfo"
+		id="bookResultMap">
+		<id property="bookId" column="bookId" />
+		<result property="bname" column="bname" />
+		<result property="btype" column="btype" />
+		<result property="price" column="price" />
+		<result property="author" column="author" />
+
+	</resultMap>
+	
+	<sql id="column_all">bookId,bname,btype,price,author
+	</sql>
+	
+</mapper>
+	
+	
