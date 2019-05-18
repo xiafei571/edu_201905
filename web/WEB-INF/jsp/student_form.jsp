@@ -19,6 +19,62 @@
 	<div class="container">
 		<h2>学生管理</h2>
 		<!-- TODO form -->
+		<form:form method="post" id="student_form" modelAttribute="student"
+			action="add">
+			<div class="form-group row">
+				<label for="student_id" class="col-sm-2 col-form-label">学生ID:</label>
+				<div class="col-sm-4">
+					<form:input path="studentno" type="text" readonly="readonly"
+						class="form-control-plaintext" id="student_id" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="student_name" class="col-sm-2 col-form-label">名前:</label>
+				<div class="col-sm-4">
+					<form:input path="sname" type="text" class="form-control"
+						id="student_name" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="student_sex" class="col-sm-2 col-form-label">性別:</label>
+				<div class="col-sm-4">
+					<form:input path="sex" type="text" class="form-control"
+						id="student_sex" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="student_birth" class="col-sm-2 col-form-label">性別:</label>
+				<div class="col-sm-4">
+					<form:input path="birth" type="text" class="form-control"
+						id="student_birth" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="student_loc" class="col-sm-2 col-form-label">性別:</label>
+				<div class="col-sm-4">
+					<form:input path="loc" type="text" class="form-control"
+						id="student_loc" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="student_ethnic" class="col-sm-2 col-form-label">性別:</label>
+				<div class="col-sm-4">
+					<form:input path="ethnic" type="text" class="form-control"
+						id="student_ethnic" />
+				</div>
+			</div>
+
+
+
+			<button type="button" class="btn"
+				onclick="window.location.href='update'">Reset</button>
+			<button id="student_submit" type="submit" class="btn btn-primary">修改</button>
+		</form:form>
+
+
+
 	</div>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -3,7 +3,6 @@
 <!--命名空间应该是对应接口的包名+接口名 -->
 <mapper namespace="edu201905.spring.model.mapper.StudentMapper">
 	<resultMap type="edu201905.spring.domain.StudentInfo"
-
 		id="studentResultMap">
 		<id property="sid" column="sid" />
 		<result property="sname" column="sname" />
@@ -18,28 +17,13 @@
 	<sql id="column_all">sid,sname,sex,birth,loc,ethnic
 	</sql>
 	<!-- 增加 -->
-	<insert id="addDept" useGeneratedKeys="true"
-		keyProperty="deptno">
-		insert into dept(
+	<insert id="addStudent" useGeneratedKeys="true"
+		keyProperty="sid">
+		insert into student(
 		<include refid="column_all" />
 		)
-		values(null,#{dname},#{loc})
+		values(null,#{sname},#{sex},#{birth},#{loc},#{ethnic})
 	</insert>
-	
-	<!-- 更新 -->
-    <update id="updateDept"
-        parameterType="edu201905.spring.domain.DeptInfo">
-        update dept
-        <set>
-            <if test="dname != null and dname != ''">
-                dname = #{dname},
-            </if>
-            <if test="loc != null and loc != ''">
-                loc = #{loc}
-            </if>
-        </set>
-        WHERE deptno = #{deptno}
-    </update>
 </mapper>
 	
 	

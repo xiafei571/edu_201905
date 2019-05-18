@@ -15,9 +15,5 @@ public interface StudentMapper {
 	@ResultMap("studentResultMap")
 	List<StudentInfo> getStudentInfoList();
 
-	Integer addStudent(DeptInfo student);
-
-	Integer updateStudent(DeptInfo student);
-
-	Integer deleteStudent(Integer student);
+	Integer addStudent(StudentInfo student);
 }

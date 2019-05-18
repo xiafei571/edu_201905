@@ -9,10 +9,5 @@ public interface StudentService {
 
 	List<StudentInfo> getStudentList();
 
-	Integer addStudent(DeptInfo student);
-
-	Integer updateStudent(DeptInfo student);
-
-	Integer deleteStudent(Integer student);
-
+	Integer addStudent(StudentInfo student);
 }
