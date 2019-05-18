@@ -6,12 +6,14 @@ USE setsu0406;
 
 -- 创建部门表
 CREATE TABLE `dept` (
-  `deptno` int(2) NOT NULL COMMENT '部门ID',
+  `deptno` int(4) NOT NULL COMMENT '部门ID',
   `dname` varchar(14) DEFAULT NULL COMMENT '部门名称',
   `loc` varchar(13) DEFAULT NULL COMMENT '所在地',
   PRIMARY KEY (`deptno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/* 11:43:13 macbook-xiafei setsu0406 */ 
+ALTER TABLE `dept` CHANGE `deptno` `deptno` INT(4)  NOT NULL  AUTO_INCREMENT  COMMENT '部门ID';
 
 CREATE TABLE `student`(
 `sid` int(10) NOT NULL COMMENT '学生ID',
