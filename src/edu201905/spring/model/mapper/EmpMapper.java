@@ -15,4 +15,6 @@ public interface EmpMapper {
 	@ResultMap("empResultMap")
 	List<EmpInfo> getEmpInfoList();
 
+	Integer addEmp(EmpInfo emp);
+
 }

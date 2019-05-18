@@ -7,5 +7,7 @@ import edu201905.spring.domain.EmpInfo;
 public interface EmpService {
 
 	List<EmpInfo> getEmpList();
+	
+	Integer addEmp(EmpInfo emp);
 
 }

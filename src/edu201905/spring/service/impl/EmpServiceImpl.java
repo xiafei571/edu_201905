@@ -19,4 +19,10 @@ public class EmpServiceImpl implements EmpService {
 		return empMapper.getEmpInfoList();
 
 	}
+
+	@Override
+	public Integer addEmp(EmpInfo emp) {
+		
+		return empMapper.addEmp(emp);
+	}
 }

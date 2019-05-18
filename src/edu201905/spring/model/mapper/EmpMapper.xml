@@ -17,4 +17,13 @@
 
 	<sql id="column_all">empno,ename,job,mgr,hiredate,sal,deptno
 	</sql>
+	
+	<!-- 增加 主键自增，需要数据库里也是auto_increment -->
+	<insert id="addEmp" useGeneratedKeys="true"
+		keyProperty="empno">
+		insert into emp(
+		<include refid="column_all" />
+		)
+		values(null,#{ename},#{job},#{mgr},#{hiredate},#{sal},#{deptno})
+	</insert>
 </mapper>
