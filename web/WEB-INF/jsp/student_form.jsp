@@ -24,7 +24,7 @@
 			<div class="form-group row">
 				<label for="student_id" class="col-sm-2 col-form-label">学生ID:</label>
 				<div class="col-sm-4">
-					<form:input path="studentno" type="text" readonly="readonly"
+					<form:input path="sid" type="text" readonly="readonly"
 						class="form-control-plaintext" id="student_id" />
 				</div>
 			</div>
@@ -45,21 +45,21 @@
 			</div>
 
 			<div class="form-group row">
-				<label for="student_birth" class="col-sm-2 col-form-label">性別:</label>
+				<label for="student_birth" class="col-sm-2 col-form-label">生日:</label>
 				<div class="col-sm-4">
 					<form:input path="birth" type="text" class="form-control"
 						id="student_birth" />
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="student_loc" class="col-sm-2 col-form-label">性別:</label>
+				<label for="student_loc" class="col-sm-2 col-form-label">籍贯:</label>
 				<div class="col-sm-4">
 					<form:input path="loc" type="text" class="form-control"
 						id="student_loc" />
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="student_ethnic" class="col-sm-2 col-form-label">性別:</label>
+				<label for="student_ethnic" class="col-sm-2 col-form-label">民族:</label>
 				<div class="col-sm-4">
 					<form:input path="ethnic" type="text" class="form-control"
 						id="student_ethnic" />
