@@ -1,6 +1,7 @@
 package edu201905.spring.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -51,6 +52,11 @@ public class DeptServiceImpl implements DeptService {
 	@Override
 	public DeptInfo getDeptInfoById(Integer id) {
 		return deptMapper.getDeptInfoById(id);
+	}
+
+	@Override
+	public List<Map<String, Object>> getDeptGroupByLoc() {
+		return deptMapper.getDeptGroupByLoc();
 	}
 
 }

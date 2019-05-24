@@ -1,6 +1,7 @@
 package edu201905.spring.model.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
@@ -33,4 +34,6 @@ public interface DeptMapper {
 	@Select("SELECT " + column_all + " FROM dept WHERE deptno = #{id}")
 	@ResultMap("deptResultMap")
 	DeptInfo getDeptInfoById(@Param("id") Integer id);
+
+	List<Map<String, Object>> getDeptGroupByLoc();
 }

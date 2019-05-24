@@ -37,4 +37,10 @@
 		WHERE deptno = #{deptno}
 	</update>
 
+	<select id="getDeptGroupByLoc" resultType="Map">
+		select loc as name,count(*) as value 
+		from dept group by loc order by value desc
+	</select>
+
+
 </mapper>

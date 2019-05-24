@@ -1,6 +1,7 @@
 package edu201905.spring.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu201905.common.page.PaginationResult;
+import edu201905.common.response.Result;
 import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.service.DeptService;
 import edu201905.util.Const;
@@ -71,5 +74,23 @@ public class DeptController {
 	public String delete(@PathVariable Integer id) {
 		deptService.deleteDept(id);
 		return "redirect:/dept/list";
+	}
+
+	// RESTful风格
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@ResponseBody
+	public Result<DeptInfo> getDeptInfoById(@PathVariable Integer id) {
+		// 不引包会报错：No converter found for return value of type:
+		DeptInfo dept = deptService.getDeptInfoById(id);
+		Result<DeptInfo> result = new Result<DeptInfo>(dept);
+		return result;
+	}
+
+	@RequestMapping(value = "/chart/loc", method = RequestMethod.GET)
+	@ResponseBody
+	public Result<List<Map<String, Object>>> getDeptGroupByLoc() {
+		List<Map<String, Object>> list = deptService.getDeptGroupByLoc();
+		Result<List<Map<String, Object>>> result = new Result<List<Map<String, Object>>>(list);
+		return result;
 	}
 }

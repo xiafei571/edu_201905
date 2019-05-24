@@ -2,6 +2,8 @@ package edu201905.util;
 
 public interface Const {
 
+	String WELL_NUMBER_SIGN = "#";
+
 	/**
 	 * 表单状态
 	 */

@@ -1,6 +1,7 @@
 package edu201905.spring.service;
 
 import java.util.List;
+import java.util.Map;
 
 import edu201905.common.page.PaginationResult;
 import edu201905.spring.domain.DeptInfo;
@@ -19,4 +20,5 @@ public interface DeptService {
 
 	DeptInfo getDeptInfoById(Integer id);
 
+	List<Map<String, Object>> getDeptGroupByLoc();
 }
