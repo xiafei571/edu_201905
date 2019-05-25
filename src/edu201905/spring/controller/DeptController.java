@@ -93,4 +93,12 @@ public class DeptController {
 		Result<List<Map<String, Object>>> result = new Result<List<Map<String, Object>>>(list);
 		return result;
 	}
+
+	@RequestMapping(value = "/{id}/show", method = RequestMethod.GET)
+	public String getDeptInfo(@PathVariable Integer id, Model model) {
+		DeptInfo dept = deptService.getDeptInfoById(id);
+		model.addAttribute("dept", dept);
+		model.addAttribute("status", Const.FormStatus.SHOW);
+		return "dept_form";
+	}
 }

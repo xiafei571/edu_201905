@@ -48,7 +48,7 @@
 						id="dept_loc" />
 				</div>
 			</div>
-			<button type="button" class="btn"
+			<button id="dept_reset" type="button" class="btn"
 				onclick="window.location.href='update'">Reset</button>
 			<button id="dept_submit" type="submit" class="btn btn-primary">修改</button>
 		</form:form>

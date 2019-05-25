@@ -12,6 +12,8 @@ public interface Const {
 		Integer ADD = 0;
 		/** 更新 */
 		Integer UPDATE = 1;
+		/** 展示 */
+		Integer SHOW = 2;
 	}
 
 	enum GenderType {

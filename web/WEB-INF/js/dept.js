@@ -36,6 +36,12 @@ function initForm(status) {
 		$("#dept_form").attr("action", "update");
 		$("#dept_submit").text("修改");
 		$("#form_tile").text("修改部门");
+	} else if (status == 2) {
+		$("#dept_submit").hide();
+		$("#dept_reset").hide();
+		$("input").attr("readonly", true).removeClass("form-control").addClass(
+				"form-control-plaintext");
+		$("#form_tile").text("部门详情");
 	}
 }
 

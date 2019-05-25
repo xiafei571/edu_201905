@@ -42,7 +42,7 @@
 							<td>${list.dname}</td>
 							<td>${list.loc}</td>
 							<td>
-							<a href="#">查看</a>
+							<a href="${list.deptno}/show">查看</a>
 							<a href="${list.deptno}/update">修改</a>
 							<a href="${list.deptno}/delete"
 								onClick="return confirm('确定删除${list.dname}吗?');">删除</a></td>
