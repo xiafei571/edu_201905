@@ -39,11 +39,17 @@
 						<th scope="row">${list.sid}</th>
 						<td>${list.sname}</td>
 						<td>${list.gender}</td>
-
+						
+							
 						<td><fmt:formatDate value="${list.birth}"
 								pattern="yyyy/MM/dd" /></td>
 						<td>${list.loc}</td>
 						<td>${list.ethnic}</td>
+						<td><a href="#">查看</a>
+							<a href="#">修改</a>
+							
+						 	<a href="#"
+							onClick="return confirm('确定删除${list.sname}吗?');">删除</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
