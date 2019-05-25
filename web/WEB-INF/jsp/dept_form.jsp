@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>添加部门</h2>
+		<h2 id="form_tile">添加部门</h2>
 		<form:form method="post" id="dept_form" modelAttribute="dept"
 			action="update">
 			<div class="form-group row">

@@ -31,9 +31,11 @@ function initForm(status) {
 	if (status == 0) {
 		$("#dept_form").attr("action", "add");
 		$("#dept_submit").text("添加");
+		$("#form_tile").text("添加部门");
 	} else if (status == 1) {
 		$("#dept_form").attr("action", "update");
 		$("#dept_submit").text("修改");
+		$("#form_tile").text("修改部门");
 	}
 }
 
