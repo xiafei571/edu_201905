@@ -2,10 +2,12 @@ package edu201905.spring.model.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
-import edu201905.spring.domain.DeptInfo;
+
+
 import edu201905.spring.domain.StudentInfo;
 
 public interface StudentMapper {
@@ -16,4 +18,8 @@ public interface StudentMapper {
 	List<StudentInfo> getStudentInfoList();
 
 	Integer addStudent(StudentInfo student);
+	
+	@Select("SELECT " + column_all + " FROM student WHERE sid = #{id}")
+	@ResultMap("studentResultMap")
+	StudentInfo getStudentById(@Param("id") Integer id);
 }

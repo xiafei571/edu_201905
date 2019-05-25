@@ -23,4 +23,9 @@ public class StudentServicelmpl implements StudentService {
 	public Integer addStudent(StudentInfo student) {
 		return studentMapper.addStudent(student);
 	}
+
+	@Override
+	public StudentInfo getStudentById(Integer id) {
+		return studentMapper.getStudentById(id);
+	}
 }
