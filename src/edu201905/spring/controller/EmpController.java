@@ -40,7 +40,7 @@ public class EmpController {
 		model.addAttribute("status", Const.FormStatus.ADD);
 		return "emp_form";
 	}
-
+	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addEmp(@ModelAttribute("emp") EmpInfo emp, HttpServletRequest request, ModelMap model,
 			Integer pageIndex, Integer pageSize) {

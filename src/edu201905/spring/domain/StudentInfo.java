@@ -2,6 +2,8 @@ package edu201905.spring.domain;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import edu201905.util.CommonUtils;
 
 public class StudentInfo {
@@ -9,6 +11,7 @@ public class StudentInfo {
 	private String sname;
 	private Integer sex;
 	private String gender;
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private Date birth;
 	private String loc;
 	private String ethnic;

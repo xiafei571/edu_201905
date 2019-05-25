@@ -24,6 +24,20 @@
 		)
 		values(null,#{sname},#{sex},#{birth},#{loc},#{ethnic})
 	</insert>
+
+	<update id="updateStudent"
+		parameterType="edu201905.spring.domain.StudentInfo">
+		update student
+		<set>
+			sname = #{sname},
+			sex = #{sex},
+			birth = #{birth},
+			loc = #{loc},
+			ethnic = #{ethnic}
+		</set>
+		WHERE sid = #{sid}
+	</update>
+
 </mapper>
 	
 	

@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>学生管理</h2>
+		<h2 　id="form_tile">学生管理</h2>
 		<!-- TODO form -->
 		<form:form method="post" id="student_form" modelAttribute="student"
 			action="add">
@@ -48,7 +48,7 @@
 				<label for="student_birth" class="col-sm-2 col-form-label">生日:</label>
 				<div class="col-sm-4">
 					<form:input path="birth" type="text" class="form-control"
-						id="student_birth" />
+						id="student_birth" placeholder="1900/01/01"/>
 				</div>
 			</div>
 			<div class="form-group row">
@@ -65,8 +65,6 @@
 						id="student_ethnic" />
 				</div>
 			</div>
-
-
 
 			<button type="button" class="btn"
 				onclick="window.location.href='update'">Reset</button>
@@ -88,7 +86,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/js/dept.js"></script>
+		src="${pageContext.request.contextPath}/js/student.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
 			initForm('${status}');
