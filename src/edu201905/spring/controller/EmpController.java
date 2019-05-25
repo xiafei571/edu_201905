@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.domain.EmpInfo;
@@ -26,22 +27,20 @@ public class EmpController {
 	private EmpService empService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String empList(HttpServletRequest request, ModelMap model) 
-	{
+	public String empList(HttpServletRequest request, ModelMap model) {
 		List<EmpInfo> result = empService.getEmpList();
 		model.addAttribute("result", result);
 		return "emp";
 
 	}
-	
+
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String addEmp(ModelMap model) 
-	{
+	public String addEmp(ModelMap model) {
 		model.addAttribute("emp", new EmpInfo());
 		model.addAttribute("status", Const.FormStatus.ADD);
 		return "emp_form";
 	}
-	
+
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addEmp(@ModelAttribute("emp") EmpInfo emp, HttpServletRequest request, ModelMap model,
 			Integer pageIndex, Integer pageSize) {
@@ -49,5 +48,9 @@ public class EmpController {
 		return "redirect:/emp/list";
 	}
 
-	
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@ResponseBody
+	public EmpInfo getEmpByid(@PathVariable Integer id) {
+		return empService.getEmpById(id);
+	}
 }

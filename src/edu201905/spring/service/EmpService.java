@@ -9,5 +9,7 @@ public interface EmpService {
 	List<EmpInfo> getEmpList();
 	
 	Integer addEmp(EmpInfo emp);
+	
+	EmpInfo getEmpById(Integer id);
 
 }

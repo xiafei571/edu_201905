@@ -11,8 +11,6 @@
 		<result property="hiredate" column="hiredate" />
 		<result property="sal" column="sal" />
 		<result property="deptno" column="deptno" />
-
-
 	</resultMap>
 
 	<sql id="column_all">empno,ename,job,mgr,hiredate,sal,deptno

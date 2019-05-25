@@ -2,6 +2,7 @@ package edu201905.spring.model.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,5 +17,9 @@ public interface EmpMapper {
 	List<EmpInfo> getEmpInfoList();
 
 	Integer addEmp(EmpInfo emp);
+
+	@Select("SELECT " + column_all + " FROM emp WHERE empno = #{id}")
+	@ResultMap("empResultMap")
+	EmpInfo getEmpById(@Param("id") Integer id);
 
 }
