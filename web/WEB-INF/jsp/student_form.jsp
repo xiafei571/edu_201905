@@ -39,8 +39,13 @@
 			<div class="form-group row">
 				<label for="student_sex" class="col-sm-2 col-form-label">性別:</label>
 				<div class="col-sm-4">
-					<form:input path="sex" type="text" class="form-control"
-						id="student_sex" />
+					<!-- <form:input path="sex" type="text" class="form-control"
+						id="student_sex" />-->
+					<form:select class="custom-select" id="student_sex" path="sex">
+						<option value="0" <c:if test="${student.sex == 0}">selected</c:if>>未知</option>
+						<option value="1" <c:if test="${student.sex == 1}">selected</c:if>>男</option>
+                        <option value="2" <c:if test="${student.sex == 2}">selected</c:if>>女</option>
+					</form:select>
 				</div>
 			</div>
 
