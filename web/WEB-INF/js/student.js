@@ -18,4 +18,11 @@ function initForm(status) {
 		$("#student_submit").text("修改");
 		$("#form_tile").text("修改学生");
 	}
+	else if (status == 2) {
+		$("#student_submit").hide();
+		$("#student_reset").hide();
+		$("input").attr("readonly", true).removeClass("form-control").addClass(
+				"form-control-plaintext");
+		$("#form_tile").text("学生详情");
+	}
 }

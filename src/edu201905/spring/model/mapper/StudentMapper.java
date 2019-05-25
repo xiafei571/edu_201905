@@ -1,6 +1,7 @@
 package edu201905.spring.model.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
@@ -26,5 +27,6 @@ public interface StudentMapper {
 
 	@Delete("DELETE FROM student WHERE sid = #{id}")
 	Integer deleteStudent(@Param("id") Integer id);
+	List<Map<String, Object>> getStudentGroupByLoc();
 
 }

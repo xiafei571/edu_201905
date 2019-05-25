@@ -45,8 +45,12 @@
 								pattern="yyyy/MM/dd" /></td>
 						<td>${list.loc}</td>
 						<td>${list.ethnic}</td>
-						<td><a href="#">查看</a> <a href="${list.sid}/update">修改</a> <a
-							href="${list.sid}/delete" onClick="return confirm('确定删除${list.sname}吗?');">删除</a></td>
+						
+						<td>
+						<a href="${list.sid}/show">查看</a> 
+						<a href="${list.sid}/update">修改</a> 
+						<a href="${list.sid}/delete"
+							onClick="return confirm('确定删除${list.sname}吗?');">删除</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

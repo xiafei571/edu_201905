@@ -48,7 +48,7 @@
 				<label for="student_birth" class="col-sm-2 col-form-label">生日:</label>
 				<div class="col-sm-4">
 					<form:input path="birth" type="text" class="form-control"
-						id="student_birth" placeholder="1900/01/01"/>
+						id="student_birth" placeholder="1900/01/01" />
 				</div>
 			</div>
 			<div class="form-group row">
@@ -66,7 +66,7 @@
 				</div>
 			</div>
 
-			<button type="button" class="btn"
+			<button id="student_reset" type="button" class="btn"
 				onclick="window.location.href='update'">Reset</button>
 			<button id="student_submit" type="submit" class="btn btn-primary">修改</button>
 		</form:form>

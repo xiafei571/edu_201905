@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import edu201905.spring.domain.DeptInfo;
 import edu201905.spring.domain.StudentInfo;
 import edu201905.spring.service.StudentService;
 import edu201905.util.Const;
@@ -77,5 +76,13 @@ public class StudentController {
 	public String delete(@PathVariable Integer id) {
 		studentService.deleteStudent(id);
 		return "redirect:/student/list";
+	}
+
+	@RequestMapping(value = "/{id}/show", method = RequestMethod.GET)
+	public String getStudentInfo(@PathVariable Integer id, Model model) {
+		StudentInfo student = studentService.getStudentById(id);
+		model.addAttribute("student", student);
+		model.addAttribute("status", Const.FormStatus.SHOW);
+		return "student_form";
 	}
 }
