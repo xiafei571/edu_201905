@@ -24,5 +24,6 @@ function initForm(status) {
 		$("input").attr("readonly", true).removeClass("form-control").addClass(
 				"form-control-plaintext");
 		$("#form_tile").text("学生详情");
+		$("select").attr("disabled", true);
 	}
 }
