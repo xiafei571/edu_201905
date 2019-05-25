@@ -54,7 +54,7 @@
 						aria-expanded="false" target="main_iframe">学生信息</a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="student/list" target="main_iframe">学生列表</a> 
-							<a class="dropdown-item" href="#" target="main_iframe">添加学生</a>
+							<a class="dropdown-item" href="student/add" target="main_iframe">添加学生</a>
 						</div>
 					</li>
 				</ul>
