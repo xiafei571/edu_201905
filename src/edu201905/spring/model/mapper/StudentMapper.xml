@@ -37,6 +37,10 @@
 		</set>
 		WHERE sid = #{sid}
 	</update>
+	<select id="getStudentGroupByLoc" resultType="Map">
+		select 	loc as name, count(*) as value from  student group by loc
+
+	</select>
 
 </mapper>
 	

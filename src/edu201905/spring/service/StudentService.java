@@ -1,6 +1,7 @@
 package edu201905.spring.service;
 
 import java.util.List;
+import java.util.Map;
 
 import edu201905.spring.domain.StudentInfo;
 
@@ -15,4 +16,7 @@ public interface StudentService {
 	Integer deleteStudent(Integer id);
 
 	StudentInfo getStudentById(Integer id);
+	
+	List<Map<String, Object>> getStudentGroupByLoc();
+
 }

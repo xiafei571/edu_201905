@@ -17,9 +17,13 @@ public interface EmpMapper {
 	List<EmpInfo> getEmpInfoList();
 
 	Integer addEmp(EmpInfo emp);
+	
 
 	@Select("SELECT " + column_all + " FROM emp WHERE empno = #{id}")
 	@ResultMap("empResultMap")
 	EmpInfo getEmpById(@Param("id") Integer id);
+	
+	
+	
 
 }

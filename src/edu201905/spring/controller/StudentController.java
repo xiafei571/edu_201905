@@ -1,6 +1,7 @@
 package edu201905.spring.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import edu201905.common.response.Result;
 import edu201905.spring.domain.StudentInfo;
 import edu201905.spring.service.StudentService;
 import edu201905.util.Const;
@@ -84,5 +86,13 @@ public class StudentController {
 		model.addAttribute("student", student);
 		model.addAttribute("status", Const.FormStatus.SHOW);
 		return "student_form";
+	}
+
+	@RequestMapping(value = "/chart/loc", method = RequestMethod.GET)
+	@ResponseBody
+	public Result<List<Map<String, Object>>> getStudentGroupByLoc() {
+		List<Map<String, Object>> list = studentService.getStudentGroupByLoc();
+		Result<List<Map<String, Object>>> result = new Result<List<Map<String, Object>>>(list);
+		return result;
 	}
 }

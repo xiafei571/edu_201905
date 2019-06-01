@@ -27,6 +27,9 @@ public interface StudentMapper {
 
 	@Delete("DELETE FROM student WHERE sid = #{id}")
 	Integer deleteStudent(@Param("id") Integer id);
+	
+	
+	
 	List<Map<String, Object>> getStudentGroupByLoc();
 
 }

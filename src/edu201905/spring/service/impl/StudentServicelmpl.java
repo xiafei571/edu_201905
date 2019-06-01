@@ -1,6 +1,7 @@
 package edu201905.spring.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -38,5 +39,10 @@ public class StudentServicelmpl implements StudentService {
 	@Override
 	public StudentInfo getStudentById(Integer id) {
 		return studentMapper.getStudentById(id);
+	}
+
+	@Override
+	public List<Map<String, Object>> getStudentGroupByLoc() {
+		return studentMapper.getStudentGroupByLoc();
 	}
 }
