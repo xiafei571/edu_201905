@@ -83,7 +83,7 @@
 		</div>
 		<div class="row">
 			<div id="dept_main_1" class="col" style="height: 400px;"></div>
-			<div id="dept_main_2" class="col"></div>
+			<div id="dept_main_2" class="col" style="height: 400px;"></div>
 		</div>
 	</div>
 	</div>
