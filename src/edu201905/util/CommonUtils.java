@@ -1,7 +1,7 @@
 package edu201905.util;
 
 public class CommonUtils {
-
+	
 	public static String sex2Gender(Integer sex) {
 		if (null != sex) {
 			if (sex.intValue() == Const.GenderType.MAN.getSex())

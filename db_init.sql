@@ -96,4 +96,7 @@ VALUES
   (20190002, 'json', 2, '1990-02-02', '北京', '满族'),
   (20190003, '梁同学', 1, '2019-01-01', '吉林', '朝鲜族');
 
+-- FIFA dataset
+-- mysql --local-infile -uroot -p
+-- LOAD DATA LOCAL INFILE '/root/software/data.csv' INTO TABLE players FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS SET Joined_date = STR_TO_DATE(@Joined_date, '%m %d, %Y');
 
