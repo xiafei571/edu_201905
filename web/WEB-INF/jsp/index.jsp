@@ -63,6 +63,8 @@
 						placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
+				<a href="#" class="btn btn-link disabled">${msg}</a>
+				<a href="logout" class="btn btn-link">退出</a>
 			</div>
 		</nav>
 		<div class="embed-responsive embed-responsive-4by3">
